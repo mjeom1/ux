@@ -11,10 +11,13 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "turbo": "^2.5.0",
-    "vitepress": "^1.6.3"
+    "vite": "^5.2.8",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
   },
   "packageManager": "pnpm@8.15.6",
   "name": "with-vite"
