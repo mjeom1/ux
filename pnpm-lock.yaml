@@ -81,6 +81,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@vitejs/plugin-vue':
+        specifier: ^5.2.4
+        version: 5.2.4(vite@5.1.4)(vue@3.5.13)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -90,6 +93,9 @@ importers:
       vite:
         specifier: ^5.1.4
         version: 5.1.4
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.5.4)
 
   packages/eslint-config:
     dependencies:
@@ -4186,6 +4192,17 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 6.3.2
+      vue: 3.5.13(typescript@5.5.4)
+    dev: true
+
+  /@vitejs/plugin-vue@5.2.4(vite@5.1.4)(vue@3.5.13):
+    resolution: {integrity: sha512-7Yx/SXSOcQq5HiiV3orevHUFn+pmMB4cgbEkDYgnkUWb0WfeQ/wa2yFv6D5ICiCQOVpjA7vYDXrC7AGO8yjDHA==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: ^5.0.0 || ^6.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 5.1.4
       vue: 3.5.13(typescript@5.5.4)
     dev: true
 
