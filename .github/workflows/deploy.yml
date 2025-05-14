@@ -37,8 +37,7 @@ jobs:
       # ---------- 합본 ----------
       # Copy outputs into one dist folder
       - name: Compose gh-pages folder
-        run: |
-          rm -rf dist              
+        run: |            
           mkdir -p dist/test
           mkdir -p dist/new-app
           cp -r apps/test/dist/*
