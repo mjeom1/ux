@@ -34,6 +34,10 @@ jobs:
       - name: Build new-app app
         run:  pnpm --filter new-app run build
 
+      # Build storybook
+      - name: Build storybook app
+        run:  pnpm --filter @repo/ui build-storybook
+
       # ---------- 합본 ----------
       # Copy outputs into one dist folder
       - name: Compose gh-pages folder
@@ -41,8 +45,10 @@ jobs:
           rm -rf dist
           mkdir -p dist/test
           mkdir -p dist/new-app
+          mkdir -p dist/storybook
           cp -r apps/test/dist/* dist/test
           cp -r apps/new-app/dist/* dist/new-app
+          cp -r packages/ui/storybook-static/* dist/storybook
 
       # ---------- GitHub Pages 배포 ----------
       - name: Deploy to gh-pages
