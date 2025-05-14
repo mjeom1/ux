@@ -36,7 +36,7 @@ jobs:
       - name: Prepare deploy folder
         run: |
           mkdir dist
-          cp -r apps/web/dist dist/web
+          cp -r apps/new-app/dist dist/new-app
           cp -r docs/.vitepress/dist dist/docs
 
       - name: Deploy to GitHub Pages
