@@ -25,18 +25,18 @@ jobs:
       - run: pnpm install
 
       # Build web (Vue)
-      - name: Build web app
-        run:  pnpm --filter web run build
+      - name: Build test app
+        run:  pnpm --filter test run build
 
       # Build web (Vue)
-      - name: Build web new-app
+      - name: Build new-app app
         run:  pnpm --filter new-app run build
 
       # Copy outputs into one dist folder
       - name: Prepare deploy folder
         run: |
           mkdir dist
-          cp -r apps/web/dist dist/new-app
+          cp -r apps/test/dist dist/test
           cp -r apps/new-app/dist dist/new-app
 
       - name: Deploy to GitHub Pages
