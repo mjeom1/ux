@@ -28,9 +28,9 @@ jobs:
       - name: Build web app
         run:  pnpm --filter web run docs:build
 
-      # Build docs (VitePress)
-      - name: Build docs (VitePress)
-        run: pnpm run docs:build
+      # Build web (Vue)
+      - name: Build web new-app
+        run:  pnpm --filter new-app run docs:build
 
       # Copy outputs into one dist folder
       - name: Prepare deploy folder
