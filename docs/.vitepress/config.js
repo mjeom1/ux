@@ -1,7 +1,9 @@
-export default {
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
     title: 'mz-repo 문서',
     description: 'pnpm + turborepo + vue 기반 monorepo 문서',
-    base: '/',
+    base: '/docs/',
     themeConfig: {
         nav: [
             { text: 'home', link: '/' },
@@ -31,4 +33,4 @@ export default {
             { icon: 'github', link: 'https://github.com/mz-pos/ux' }
         ]
     }
-}
+})
