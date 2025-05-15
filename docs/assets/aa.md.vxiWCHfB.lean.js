@@ -1,0 +1,1 @@
+import{_ as e,c as d,o as r,ae as a}from"./chunks/framework.DST44r1Q.js";const V=JSON.parse('{"title":"VitePress vs VuePress 비교","description":"","frontmatter":{},"headers":[],"relativePath":"aa.md","filePath":"aa.md"}'),s={name:"aa.md"};function h(i,t,o,n,l,u){return r(),d("div",null,t[0]||(t[0]=[a("",15)]))}const P=e(s,[["render",h]]);export{V as __pageData,P as default};
