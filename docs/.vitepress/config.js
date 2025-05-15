@@ -1,9 +1,25 @@
 import { defineConfig } from 'vitepress'
+import { resolve } from 'path'
+import fs from 'fs'
 
 export default defineConfig({
     title: 'mz-repo 문서',
     description: 'pnpm + turborepo + vue 기반 monorepo 문서',
     base: '/docs/',
+    vite: {
+        plugins: [
+            {
+                name: 'spa-fallback',
+                closeBundle: () => {
+                    const indexPath = resolve(__dirname, '../dist/index.html')
+                    const fallbackPath = resolve(__dirname, '../dist/404.html')
+                    if (fs.existsSync(indexPath)) {
+                        fs.copyFileSync(indexPath, fallbackPath)
+                    }
+                }
+            }
+        ]
+    },
     themeConfig: {
         nav: [
             { text: 'home', link: '/' },
