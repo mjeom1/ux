@@ -2,7 +2,17 @@ name: Deploy GitHub Pages (multi-app)
 
 on:
   push:
+    # `main` 브랜치를 대상으로 하는 푸시에서 실행됩니다. 기본 브랜치로 `master`를 사용하는 경우 여기를 `master`로 변경하세요.
     branches: [main]
+
+  # Actions 탭에서 이 워크플로우를 수동으로 실행할 수 있게 합니다.
+  workflow_dispatch:
+
+  # GitHub Pages에 배포할 수 있도록 GITHUB_TOKEN의 권한을 설정합니다.
+  permissions:
+    contents: read
+    pages: write
+    id-token: write
 
 jobs:
   deploy:
@@ -35,11 +45,11 @@ jobs:
         run:  pnpm --filter new-app run build
 
       # Build storybook
-      - name: Build storybook app
+      - name: Build with Storybook
         run:  pnpm --filter @repo/ui build-storybook
 
       # Build vitepress
-      - name: Build vitepress app
+      - name: Build with VitePress
         run:  pnpm vitepress build docs
 
       # ---------- 합본 ----------
@@ -50,11 +60,11 @@ jobs:
           mkdir -p dist/test
           mkdir -p dist/new-app
           mkdir -p dist/storybook
-          mkdir -p dist/vitepress
+          mkdir -p dist/docs
           cp -r apps/test/dist/* dist/test
           cp -r apps/new-app/dist/* dist/new-app
           cp -r packages/ui/storybook-static/* dist/storybook
-          cp -r docs/.vitepress/dist/* dist/vitepress
+          cp -r docs/.vitepress/dist/* dist/docs
 
       # ---------- GitHub Pages 배포 ----------
       - name: Deploy to gh-pages
