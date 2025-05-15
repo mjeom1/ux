@@ -5,7 +5,7 @@ import fs from 'fs'
 export default defineConfig({
     title: 'mz-repo 문서',
     description: 'pnpm + turborepo + vue 기반 monorepo 문서',
-    base: '/docs/',
+    base: '/ux/docs/',
     vite: {
         plugins: [
             {
