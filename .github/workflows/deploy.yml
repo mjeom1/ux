@@ -35,9 +35,13 @@ jobs:
       - name: Build test app
         run:  pnpm --filter test run build
 
-      # Build web (Vue)
+      # Build new-app (Vue)
       - name: Build new-app app
         run:  pnpm --filter new-app run build
+
+      # Build web (Vue)
+      - name: Build web app
+        run:  pnpm --filter web run build
 
       # Build storybook
       - name: Build with Storybook
