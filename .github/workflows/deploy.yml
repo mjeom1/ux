@@ -58,10 +58,12 @@ jobs:
           rm -rf dist
           mkdir -p dist/test
           mkdir -p dist/new-app
+          mkdir -p dist/web
           mkdir -p dist/storybook
           mkdir -p dist/docs
           cp -r apps/test/dist/* dist/test
           cp -r apps/new-app/dist/* dist/new-app
+          cp -r apps/web/dist/* dist/web
           cp -r packages/ui/storybook-static/* dist/storybook
           cp -r docs/.vitepress/dist/* dist/docs
 
