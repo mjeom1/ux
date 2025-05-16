@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import fs from 'fs'
+import {BASE_REPOSITORY_NAME_PATH} from 'config/constants.js'
 
 // Copy index.html to 404.html after build
 function spaFallback() {
@@ -20,5 +21,5 @@ function spaFallback() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), spaFallback()],
-  base: '/ux/test/',
+  base: BASE_REPOSITORY_NAME_PATH + 'test/',
 })

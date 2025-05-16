@@ -1,11 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { resolve } from 'path'
 import fs from 'fs'
+import {BASE_REPOSITORY_NAME_PATH} from 'config/constants.js'
 
 export default defineConfig({
     title: 'mz-repo 문서',
     description: 'pnpm + turborepo + vue 기반 monorepo 문서',
-    base: '/ux/docs/',
+    base: BASE_REPOSITORY_NAME_PATH + 'docs/',
     vite: {
         plugins: [
             {
