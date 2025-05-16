@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { resolve } from 'path'
 import fs from 'fs'
-import {BASE_REPOSITORY_NAME_PATH} from 'config/constants.js'
+import {BASE_REPOSITORY_NAME_PATH} from '../../config/constants.js'
 
 export default defineConfig({
     title: 'mz-repo 문서',
