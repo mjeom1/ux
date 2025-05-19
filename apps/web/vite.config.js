@@ -20,5 +20,5 @@ function spaFallback() {
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [spaFallback()],
-    base: BASE_REPOSITORY_NAME_PATH + '/',
+    base: BASE_REPOSITORY_NAME_PATH,
 })
