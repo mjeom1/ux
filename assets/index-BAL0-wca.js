@@ -2,7 +2,7 @@
     <header id="header">
       <h1>${o}</h1>
     </header>
-    `}const u="/ux/web/typescript.svg";function l(){return'<button id="counter" type="button"></button>'}function a(o){let r=0;const n=i=>{r=i,o.innerText=`count is ${r}`};o.addEventListener("click",()=>n(++r)),n(0)}document.querySelector("#app").innerHTML=`
+    `}const u="/web/typescript.svg";function l(){return'<button id="counter" type="button"></button>'}function a(o){let r=0;const n=i=>{r=i,o.innerText=`count is ${r}`};o.addEventListener("click",()=>n(++r)),n(0)}document.querySelector("#app").innerHTML=`
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
