@@ -62,7 +62,7 @@ jobs:
           mkdir -p dist/docs
           cp -r apps/test/dist/* dist/test
           cp -r apps/new-app/dist/* dist/new-app
-          cp -r apps/web/dist/* dist/web
+          cp -r apps/web/dist/* dist
           cp -r packages/ui/storybook-static/* dist/storybook
           cp -r docs/.vitepress/dist/* dist/docs
 
